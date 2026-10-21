@@ -17,11 +17,11 @@ Approch :-
     then it give false.
 */
 
-bool Duplicate(int s, int arr[])
+bool Duplicate(int arr[])
 {
-    for(int i=0;i<s;i++)
+    for(int i=0;i<arr.length();i++)
     {
-        for(int j=i+1;j<s;j++)
+        for(int j=i+1;j<arr.length();j++)
         {
             if(arr[i] == arr[j])
             {
