@@ -4,19 +4,23 @@ using namespace std;
 
 int uniqueNum(vector<int> arr)
 {
-	bool status = true;
 	for(int i=0;i<arr.size();i++)
 	{
-		for(int j=i+1;j<arr.size();j++)
+		bool status = true;
+		for(int j=0;j<arr.size();j++)
 		{
-			if(arr[i] == arr[j])
+			if(i!=j && arr[i] == arr[j])
 			{
-
+				status = false;
 				break;
 			}
 		}
-
-
+		if(status)
+		{
+			return arr[i];
+		}
+	}
+	return 0;
 }
 
 int main()
